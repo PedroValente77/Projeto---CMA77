@@ -33,6 +33,9 @@ header {
 /* MENU */ 
 
 menu{
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Fica acima de outros elementos */
     background-color: #064B8A;
     height: 50px;
     text-align: center;
@@ -194,4 +197,28 @@ menu{
 
   .menu-e:hover .opcoes {
     display: block;
+  }
+
+  /* SECTION */
+
+  section{
+    height: 300px;
+    background-image: url("img/fundosection.png");
+  }
+
+
+  .index-noticia1{
+    width: 43%;
+    float: left;
+    text-align: center;
+    padding: 5%;
+  }
+
+  .index-noticia2{
+    padding: 5%;
+    text-align: left;
+  }
+
+  .index-noticia2 iframe{
+    margin-right: 2%;
   }
