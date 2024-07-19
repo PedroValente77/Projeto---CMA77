@@ -70,8 +70,8 @@
             <iframe class="" src="https://www.instagram.com/p/C9Vy--pyE63/embed" width="400" height="500" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
         </div>
         <div class="index-noticia2">
-            <iframe class="" src="https://www.instagram.com/p/C9U3witRpWL/embed" width="250" height="500" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-            <iframe class="" src="https://www.instagram.com//p/C9UgbjDOFdg/embed" width="250" height="500" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+            <iframe class="" src="https://www.instagram.com/p/C9U3witRpWL/embed" width="250" height="350" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+            <iframe class="" src="https://www.instagram.com//p/C9UgbjDOFdg/embed" width="250" height="350" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
         </div>
     </section>
     <main>
@@ -88,5 +88,86 @@
             <a href=""><img src="/img/JOGO3.png" width="25%"></a>
         </div>
     </main>
+    <nav>
+        <div class="portao3">
+            <img src="img/semfundoportao3.png" width="15%">
+        </div>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <iframe src="https://www.instagram.com/p/C9faahCOh-h/embed" width="385" height="430" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <iframe src="https://www.instagram.com/p/C9dL349y46U/embed" width="385" height="430" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <iframe src="https://www.instagram.com/p/C9dLEL8Sz3y/embed" width="385" height="430" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <iframe src="https://www.instagram.com/p/C9c6zq9Oomy/embed" width="385" height="430" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <iframe src="https://www.instagram.com/p/C9CrWTSOp5g/embed" width="385" height="430" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <iframe src="https://www.instagram.com/p/C87SvuGugTK/embed" width="385" height="430" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+            </div>
+        </div>
+        <div>
+        <div class="botoes_carrosel">
+            <button class="carousel-prev">&laquo; Anterior</button>
+            <button class="carousel-next">Próximo &raquo;</button>
+        </div>
+    </div>
+    </nav>    
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const carouselSlide = document.querySelector('.carousel-slide');
+        const images = carouselSlide.querySelectorAll('iframe');
+    
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+    
+        let counter = 1; 
+        const slideSize = 1 / 8; 
+    
+        const firstClone = images[0].cloneNode(true);
+        carouselSlide.appendChild(firstClone);
+    
+        const lastClone = images[images.length - 1].cloneNode(true);
+        carouselSlide.insertBefore(lastClone, images[0]);
+
+        carouselSlide.style.width = `${(images.length + 2.5) * slideSize * 100}%`;
+
+        carouselSlide.style.transform = `translateX(-${counter * slideSize * 100}%)`;
+
+        function moveToSlide(index) {
+            carouselSlide.style.transition = 'transform 0.4s ease-in-out';
+            carouselSlide.style.transform = `translateX(-${index * slideSize * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (counter >= images.length + 1) {
+                counter = 1;
+                moveToSlide(counter);
+            } else {
+                counter++;
+                moveToSlide(counter);
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (counter <= 0) {
+                counter = images.length;
+                moveToSlide(counter);
+            } else {
+                counter--;
+                moveToSlide(counter);
+            }
+        });
+    
+        carouselSlide.addEventListener('transitionend', () => {
+            if (images[counter - 1] === firstClone) {
+                counter = 1;
+                carouselSlide.style.transition = 'none';
+                carouselSlide.style.transform = `translateX(-${counter * slideSize * 100}%)`;
+            }
+            if (images[counter - 1] === lastClone) {
+                counter = images.length;
+                carouselSlide.style.transition = 'none';
+                carouselSlide.style.transform = `translateX(-${counter * slideSize * 100}%)`;
+            }
+        });
+    });
+    </script>
 </html>
