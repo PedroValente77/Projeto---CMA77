@@ -10,6 +10,7 @@ header {
     height: 120px;
     text-align: center;
     background-size: 100%;
+    min-width: 1349px;
 }
 
 .redessociais{
@@ -21,6 +22,14 @@ header {
 
 .redessociais img{
     margin-left: 1%;
+}
+
+.hportao3{
+  width: 7%;
+}
+
+.hsocio{
+  width: 17%;
 }
 
 .lojas{
@@ -42,6 +51,7 @@ menu{
     height: 50px;
     text-align: center;
     color: white;
+    min-width: 1349px;
 }
 
 .menu-d{
@@ -206,6 +216,7 @@ menu{
   section{
     background-image: url("img/fundosection.png");
     background-size: 72%;
+    min-width: 1349px;
   }
 
   .index-noticia1{
@@ -230,6 +241,7 @@ menu{
   main{
     margin: 3%;
     color: #0C4C9B;
+    min-width: 1300px;
   }
 
   .main_esquerda{
@@ -254,6 +266,7 @@ menu{
 
   nav{
     background-image: url("img/fundocontent.png");
+    min-width: 1349px;
   }
 
   .portao3{
@@ -308,6 +321,7 @@ menu{
 article {
   text-align: center;
   color: #0C4C9B;
+  min-width: 1349px;
 }
 
 article h1{
@@ -326,6 +340,7 @@ footer {
   text-align: center;
   color: white;
   margin-top: 2%;
+  min-width: 1349px;
 }
 
 .titulo_patrofooter {
@@ -361,3 +376,43 @@ footer {
   float: left;
 }
 
+@media screen and (max-width: 500px) {
+
+  header {
+    background-image: url("img/header.png");
+    height: 60px;
+    text-align: center;
+    background-size: 100%;
+    min-width: 350px;
+  }
+
+  .redessociais{
+      text-align: left;
+      padding: 3%;
+      width: 50%;
+      float: left;
+  }
+
+  .redessociais img{
+      margin-left: 0.5%;
+      width: 20%;
+  }
+
+  .hportao3{
+    width: 12%;
+  }
+
+  .hsocio{
+    width: 28%;
+  }
+
+  .lojas{
+      text-align: right;
+      padding: 3.5%;
+  }
+
+  .lojas img{
+      margin-left: 0.5%;
+  }
+
+}
