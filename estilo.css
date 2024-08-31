@@ -211,6 +211,10 @@ menu{
     display: block;
   }
 
+  .logo {
+    width: 8%;
+  }
+
   /* SECTION */
 
   section{
@@ -415,4 +419,203 @@ footer {
       margin-left: 0.5%;
   }
 
+  /* MENU */ 
+
+  menu{
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    background-color: #064B8A;
+    height: 50px;
+    text-align: center;
+    color: white;
+    min-width: 350px;
+    font-size: 13px;
+  }
+
+  .menu-d{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    right: 300px;
+    top: -45px;
+  }
+
+  .opcoes {
+    display: none;
+    position: absolute;
+    background-color: #064B8A;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 50px;
+    top: 3px;
+  }
+
+  .opcoes a {
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .opcoes a:hover {
+    background-color: #1663aa;
+  }
+  
+  .opcoes2 {
+    display: none;
+    position: absolute;
+    background-color: #064B8A;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 140px;
+  }
+
+  .opcoes2 a {
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .opcoes2 a:hover {
+    background-color: #1663aa;
+  }
+
+  .opcoes3 {
+    display: none;
+    position: absolute;
+    background-color: #064B8A;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 60px;
+  }
+
+  .opcoes3 a {
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .opcoes3 a:hover {
+    background-color: #1663aa;
+  }
+
+  .opcoes4 {
+    display: none;
+    position: absolute;
+    background-color: #064B8A;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 10px;
+  }
+
+  .opcoes4 a {
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .opcoes4 a:hover {
+    background-color: #1663aa;
+  }
+
+  .menuum:hover .opcoes {
+    display: block;
+  }
+
+  .menudois:hover .opcoes2 {
+    display: block;
+  }
+
+  .menutres:hover .opcoes3 {
+    display: block;
+  }
+
+  .menuquatro:hover .opcoes4 {
+    display: block;
+  }
+
+  .menu-opcao1{
+    position: absolute;
+    left: 50px;
+    top: -15px;
+    width: 80px;
+  }
+
+  .menu-opcao2{
+    position: absolute;
+    left: 120px;
+    top: -15px;
+    width: 100px;
+  }
+
+  .menu-opcao3{
+    position: absolute;
+    right: 120px;
+    top: -20px;
+    width: 120px;
+  }
+
+  .menu-opcao4{
+    position: absolute;
+    right: 50px;
+    top: -13px;
+    width: 100px;
+  }
+
+  .menu-e{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    left: 100px;
+    bottom: 45px;
+  }
+
+  .menu-e:hover .opcoes {
+    display: block;
+  }
+
+  .logo{
+    width: 20%;
+    position: relative;
+    right: 110px;
+  }
+
+  /* SECTION */
+
+  section{
+    background-image: url("img/fundosection.png");
+    background-size: 72%;
+    min-width: 1349px;
+  }
+
+  .index-noticia1{
+    width: 43%;
+    float: left;
+    text-align: center;
+    padding: 5%;
+  }
+
+  .index-noticia2{
+    padding: 5%;
+    text-align: left;
+    height: 465px;
+  }
+
+  .index-noticia2 iframe{
+    margin-right: 2%;
+  }
 }
