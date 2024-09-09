@@ -67,7 +67,7 @@
     </menu>
     <section>
         <div class="index-noticia1">
-            <iframe class="" src="https://www.instagram.com/p/C9Vy--pyE63/embed" width="400" height="500" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+            <iframe class="" src="https://www.instagram.com/p/C9Vy--pyE63/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
         </div>
         <div class="index-noticia2">
             <iframe class="" src="https://www.instagram.com/p/C9U3witRpWL/embed" width="250" height="350" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
@@ -78,7 +78,7 @@
         <div class="main_esquerda">
             <h1> Sócio Máfia Azul </h1>
             <h3> Seja sócio da maior de Minas</h3>
-            <a href=""><img src="/img/bannersocio.png" width="60%"></a>
+            <a href=""><img src="/img/bannersocio.png"></a>
         </div>
         <div class="main_direita">
             <h1> Jogos do Cruzeiro </h1>
@@ -90,7 +90,7 @@
     </main>
     <nav>
         <div class="portao3">
-            <img src="img/semfundoportao3.png" width="15%">
+            <img src="img/semfundoportao3.png">
         </div>
         <div class="carousel-container">
             <div class="carousel-slide">
@@ -160,12 +160,18 @@
         const prevBtn = document.querySelector('.carousel-prev');
         const nextBtn = document.querySelector('.carousel-next');
     
-        let counter = 1; 
-        const slideSize = 1 / 8; 
     
+        if (window.innerWidth < 501) {
+            let counter = 1; 
+            const slideSize = 1 / 4;
+        } else {
+            let counter = 1; 
+            const slideSize = 1 / 8; 
+        }
+
         const firstClone = images[0].cloneNode(true);
         carouselSlide.appendChild(firstClone);
-    
+        
         const lastClone = images[images.length - 1].cloneNode(true);
         carouselSlide.insertBefore(lastClone, images[0]);
 

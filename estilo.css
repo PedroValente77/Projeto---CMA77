@@ -230,6 +230,11 @@ menu{
     padding: 5%;
   }
 
+  .index-noticia1 iframe {
+    width: 400px; 
+    height: 500px;
+  }
+
   .index-noticia2{
     padding: 5%;
     text-align: left;
@@ -256,6 +261,7 @@ menu{
 
   main img{
     margin-top: 4%;
+    width: 60%;
   }
 
   .main_direita{
@@ -276,6 +282,10 @@ menu{
   .portao3{
     text-align: center;
     padding: 1%;
+  }
+
+  .portao3 img{
+    width: 15%;
   }
 
   nav iframe{
@@ -599,23 +609,117 @@ footer {
   section{
     background-image: url("img/fundosection.png");
     background-size: 72%;
-    min-width: 1349px;
+    min-width: 350px;
+    height: 675px;
   }
 
   .index-noticia1{
-    width: 43%;
-    float: left;
+    width: 100%;
     text-align: center;
-    padding: 5%;
+    padding-top: 10%;
+    padding-left: 0%;
+  }
+
+  .index-noticia1 iframe {
+    width: 300px; 
+    height: 350px;
   }
 
   .index-noticia2{
-    padding: 5%;
-    text-align: left;
+    text-align: center;
     height: 465px;
+    width: 100%;
+    padding: 1%;
   }
 
   .index-noticia2 iframe{
-    margin-right: 2%;
+    margin-right: 3%;
+    width: 175px; 
+    height: 225px;
+  }
+
+  /* Main */
+
+  main{
+    margin: 3%;
+    color: #0C4C9B;
+    min-width: 350px;
+  }
+
+  .main_esquerda{
+    width: 100%;
+    text-align: center;
+  }
+
+  main img{
+    margin-top: 4%;
+    width: 80%;
+  }
+
+  .main_direita{
+    text-align: center;
+  }
+
+  .main_direita img{
+    margin-top: 2%;
+  }
+
+  /* NAV */
+
+    nav{
+      background-image: url("img/fundocontent.png");
+      min-width: 350px;
+      background-size: 125%;
+    }
+
+    .portao3{
+      text-align: center;
+      padding: 0%;
+    }
+
+    .portao3 img{
+      width: 40%;
+    }
+
+    nav iframe{
+      margin: 0% 1%;
+    }
+
+    .carousel-container {
+      width: 100%;
+      overflow: hidden;
+      margin: 0 auto;
+  }
+
+    .carousel-slide {
+        display: flex;
+        transition: transform 0.5s ease;
+        text-align: center;
+    }
+
+  .carousel-prev, .carousel-next {
+      padding: 10px;
+      background-color: #0C4C9B;
+      color: white;
+      text-decoration: none;
+      font-size: larger;
+      margin-bottom: 2%;
+  }
+
+  .carousel-prev:hover{
+    background-color: #072d5c;
+  }
+
+  .carousel-prev{
+    margin-right: 34%;
+    margin-left: 2%;
+  }
+
+  .carousel-next:hover{
+    background-color: #072d5c;
+  }
+
+  .botoes_carrosel{
+    margin-top: 3%;
   }
 }
