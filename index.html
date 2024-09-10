@@ -160,13 +160,13 @@
         const prevBtn = document.querySelector('.carousel-prev');
         const nextBtn = document.querySelector('.carousel-next');
     
+        let counter = 1; 
+        let slideSize = 1 / 8;
     
         if (window.innerWidth < 501) {
-            let counter = 1; 
-            const slideSize = 1 / 4;
+            slideSize = 1 / 3.5;
         } else {
-            let counter = 1; 
-            const slideSize = 1 / 8; 
+             
         }
 
         const firstClone = images[0].cloneNode(true);
