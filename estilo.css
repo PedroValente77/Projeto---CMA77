@@ -722,4 +722,20 @@ footer {
   .botoes_carrosel{
     margin-top: 3%;
   }
+
+    /* Article */
+
+  article {
+    text-align: center;
+    color: #0C4C9B;
+    min-width: 350px;
+  }
+
+  article h1{
+    margin-top: 3%;
+  }
+
+  .videos iframe{
+    margin-top: 1%;
+  }
 }
