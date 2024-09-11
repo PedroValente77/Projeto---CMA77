@@ -770,6 +770,7 @@ footer {
 
   .patrofooter img{
     margin: 0% 3%;
+    width: 25%;
   }
 
   .line{
@@ -790,12 +791,11 @@ footer {
 
   .contato {
     float: left;
-    margin-left: 22%;
+    margin-left: 17%;
   }
 
   .final_footer .lojas{
     width: 90%;
   }
-
 
 }
