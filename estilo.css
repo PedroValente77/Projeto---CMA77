@@ -203,7 +203,7 @@ menu{
     display: inline-block;
     cursor: pointer;
     position: relative;
-    left: 35%;
+    left: 0%;
     bottom: 150%;
   }
 
@@ -448,8 +448,8 @@ footer {
     display: inline-block;
     cursor: pointer;
     position: relative;
-    right: 300px;
-    top: -45px;
+    right: 72%;
+    bottom: 100%;
   }
 
   .opcoes {
@@ -459,7 +459,7 @@ footer {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    left: 50px;
+    left: 40px;
     top: 3px;
   }
 
@@ -482,7 +482,8 @@ footer {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    left: 140px;
+    left: 130px;
+    top: 5px;
   }
 
   .opcoes2 a {
@@ -504,7 +505,8 @@ footer {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    right: 60px;
+    right: -40px;
+    top: 5px;
   }
 
   .opcoes3 a {
@@ -526,7 +528,8 @@ footer {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    right: 10px;
+    right: -44px;
+    top: 5px;
   }
 
   .opcoes4 a {
@@ -559,29 +562,29 @@ footer {
 
   .menu-opcao1{
     position: absolute;
-    left: 50px;
-    top: -15px;
+    left: 40px;
+    top: -10px;
     width: 80px;
   }
 
   .menu-opcao2{
     position: absolute;
-    left: 120px;
-    top: -15px;
+    left: 105px;
+    top: -10px;
     width: 100px;
   }
 
   .menu-opcao3{
     position: absolute;
-    right: 120px;
-    top: -20px;
+    right: 20px;
+    top: -15px;
     width: 120px;
   }
 
   .menu-opcao4{
     position: absolute;
-    right: 50px;
-    top: -13px;
+    right: -44px;
+    top: -10px;
     width: 100px;
   }
 
@@ -590,8 +593,8 @@ footer {
     display: inline-block;
     cursor: pointer;
     position: relative;
-    left: 100px;
-    bottom: 45px;
+    left: 0%;
+    bottom: 100%;
   }
 
   .menu-e:hover .opcoes {
@@ -601,7 +604,7 @@ footer {
   .logo{
     width: 20%;
     position: relative;
-    right: 110px;
+    right: 29%;
   }
 
   /* SECTION */
@@ -616,8 +619,8 @@ footer {
   .index-noticia1{
     width: 100%;
     text-align: center;
-    padding-top: 10%;
-    padding-left: 0%;
+    padding: 10% 0% 3% 0%;
+
   }
 
   .index-noticia1 iframe {
@@ -629,11 +632,11 @@ footer {
     text-align: center;
     height: 465px;
     width: 100%;
-    padding: 1%;
+    padding: 0%;
   }
 
   .index-noticia2 iframe{
-    margin-right: 3%;
+    margin: 0% 2% 0% 2%;
     width: 175px; 
     height: 225px;
   }
