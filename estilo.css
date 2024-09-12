@@ -830,7 +830,7 @@ footer {
 
   header {
     background-image: url("img/header.png");
-    height: 120px;
+    height: 160px;
     text-align: center;
     background-size: 100%;
     min-width: 1349px;
@@ -841,6 +841,7 @@ footer {
     padding: 2%;
     width: 50%;
     float: left;
+    margin-top: 1%;
 }
 
 .redessociais img{
@@ -884,7 +885,7 @@ menu{
   display: inline-block;
   cursor: pointer;
   position: relative;
-  right: 60%;
+  right: 33%;
   bottom: 240%;
 }
 
@@ -1029,7 +1030,7 @@ menu{
   display: inline-block;
   cursor: pointer;
   position: relative;
-  left: 5%;
+  left: 33%;
   bottom: 240%;
 }
 
@@ -1039,7 +1040,5 @@ menu{
 
 .logo {
   width: 8%;
-  position: relative;
-  right: 28%;
 }
 }
