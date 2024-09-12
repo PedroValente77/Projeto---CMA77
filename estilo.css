@@ -1041,4 +1041,36 @@ menu{
 .logo {
   width: 8%;
 }
+
+/* SECTION */
+
+  section{
+    background-image: url("img/fundosection.png");
+    background-size: 72%;
+    min-width: 1349px;
+  }
+
+  .index-noticia1{
+    width: 43%;
+    float: left;
+    text-align: center;
+    padding: 5% 18% 0% 0%;
+  }
+
+  .index-noticia1 iframe {
+    width: 650px; 
+    height: 700px;
+  }
+
+  .index-noticia2{
+    padding: 5%;
+    padding-right: 0%;
+    text-align: left;
+    height: 650px;
+  }
+
+  .index-noticia2 iframe{
+    margin-right: 2%;
+    width: 300px;
+  }
 }
