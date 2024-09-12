@@ -1134,4 +1134,49 @@ menu{
   margin-top: 3%;
 }
 
+/* FOOTER */
+
+footer {
+  background-image: url("img/footer.png");
+  background-size: 100%;
+  text-align: center;
+  color: white;
+  margin-top: 2%;
+  min-width: 1349px;
+}
+
+.titulo_patrofooter {
+  padding: 5%;
+}
+
+.patrofooter{
+  color:#0C4C9B;
+}
+
+.patrofooter h3 {
+  background-color: white;
+  width: 30%;
+  margin: 3% 0% 4% 35%;
+}
+
+.patrofooter img{
+  margin: 0% 3%;
+}
+
+.line{
+  background-color: white;
+  width: 90%;
+  height: 2px;
+  margin: 0% 0% 2% 4%;
+}
+
+.final_footer .redessociais{
+  width: 50%;
+}
+
+.contato {
+  float: left;
+  position: relative;
+  right: 11%;
+}
 }
