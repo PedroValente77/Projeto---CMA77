@@ -1073,4 +1073,65 @@ menu{
     margin-right: 2%;
     width: 300px;
   }
+
+  /* NAV */
+
+  nav{
+    background-image: url("img/fundocontent.png");
+    min-width: 1349px;
+  }
+
+  .portao3{
+    text-align: center;
+    padding: 1%;
+  }
+
+  .portao3 img{
+    width: 15%;
+  }
+
+  nav iframe{
+    margin: 0% 1%;
+    width: 7000px;
+    height: 630px;
+  }
+
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+  .carousel-slide {
+      display: flex;
+      transition: transform 0.5s ease;
+      text-align: center;
+  }
+
+.carousel-prev, .carousel-next {
+    padding: 10px;
+    background-color: #0C4C9B;
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+    margin-bottom: 2%;
+}
+
+.carousel-prev:hover{
+  background-color: #072d5c;
+}
+
+.carousel-prev{
+  margin-right: 83%;
+  margin-left: 2%;
+}
+
+.carousel-next:hover{
+  background-color: #072d5c;
+}
+
+.botoes_carrosel{
+  margin-top: 3%;
+}
+
 }
