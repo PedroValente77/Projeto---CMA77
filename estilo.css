@@ -825,3 +825,221 @@ footer {
   }
 
 }
+
+@media screen and (min-width: 1500px) {
+
+  header {
+    background-image: url("img/header.png");
+    height: 120px;
+    text-align: center;
+    background-size: 100%;
+    min-width: 1349px;
+}
+
+.redessociais{
+    text-align: left;
+    padding: 2%;
+    width: 50%;
+    float: left;
+}
+
+.redessociais img{
+    margin-left: 1%;
+    width: 6%;
+}
+
+.hportao3{
+  width: 7%;
+}
+
+.hsocio{
+  width: 17%;
+}
+
+.lojas{
+    text-align: right;
+    padding: 2%;
+}
+
+.lojas img{
+    margin-left: 1%;
+}
+
+/* MENU */ 
+
+menu{
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+  background-color: #064B8A;
+  height: 50px;
+  text-align: center;
+  color: white;
+  min-width: 350px;
+  font-size: 23px;
+}
+
+.menu-d{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  right: 60%;
+  bottom: 240%;
+}
+
+.opcoes {
+  display: none;
+  position: absolute;
+  background-color: #064B8A;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left: 40px;
+  top: 10px;
+}
+
+.opcoes a {
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.opcoes a:hover {
+  background-color: #1663aa;
+}
+
+.opcoes2 {
+  display: none;
+  position: absolute;
+  background-color: #064B8A;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left: 340px;
+  top: 10px;
+}
+
+.opcoes2 a {
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.opcoes2 a:hover {
+  background-color: #1663aa;
+}
+
+.opcoes3 {
+  display: none;
+  position: absolute;
+  background-color: #064B8A;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 280px;
+  top: 10px;
+}
+
+.opcoes3 a {
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.opcoes3 a:hover {
+  background-color: #1663aa;
+}
+
+.opcoes4 {
+  display: none;
+  position: absolute;
+  background-color: #064B8A;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: -95px;
+  top: 10px;
+}
+
+.opcoes4 a {
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.opcoes4 a:hover {
+  background-color: #1663aa;
+}
+
+.menuum:hover .opcoes {
+  display: block;
+}
+
+.menudois:hover .opcoes2 {
+  display: block;
+}
+
+.menutres:hover .opcoes3 {
+  display: block;
+}
+
+.menuquatro:hover .opcoes4 {
+  display: block;
+}
+
+.menu-opcao1{
+  position: absolute;
+  left: 30px;
+  top: -15px;
+  width: 160px;
+}
+
+.menu-opcao2{
+  position: absolute;
+  left: 335px;
+  top: -15px;
+  width: 100px;
+}
+
+.menu-opcao3{
+  position: absolute;
+  right: 200px;
+  top: -15px;
+  width: 250px;
+}
+
+.menu-opcao4{
+  position: absolute;
+  right: 0px;
+  top: -15px;
+  width: 100px;
+}
+
+.menu-e{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  left: 5%;
+  bottom: 240%;
+}
+
+.menu-e:hover .opcoes {
+  display: block;
+}
+
+.logo {
+  width: 8%;
+  position: relative;
+  right: 28%;
+}
+}
