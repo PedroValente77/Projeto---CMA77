@@ -401,8 +401,8 @@ footer a {
 }
 .patrofooter h3 {
   background-color: white;
-  margin: 10% 0% 10% 115%;
   width: 100%;
+  margin: 5% 0% 5% 35%;
 }
 
 .patrofooter img{
@@ -796,10 +796,20 @@ footer a {
     color:#0C4C9B;
   }
 
+  .patrofooter a{
+    text-decoration: none;
+  }
+  
+  .patrofooter div {
+    text-align: center;
+    width: 80%;
+    margin: 10% 0% 10% 10%;
+  }
+  
   .patrofooter h3 {
     background-color: white;
-    width: 80%;
-    margin: 10% 0% 5% 10%;
+    width: 100%;
+    margin: 0%;
   }
 
   .patrofooter img{
@@ -1161,10 +1171,19 @@ footer {
   color:#0C4C9B;
 }
 
+.patrofooter a{
+  text-decoration: none;
+}
+
+.patrofooter div {
+  text-align: center;
+  width: 30%;
+  margin: 5% 0% 5% 24.5%;
+}
+
 .patrofooter h3 {
   background-color: white;
-  width: 30%;
-  margin: 3% 0% 4% 35%;
+  width: 100%;
 }
 
 .patrofooter img{
