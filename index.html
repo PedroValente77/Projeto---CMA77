@@ -94,7 +94,7 @@
         </div>
         <div class="carousel-container">
             <div class="carousel-slide">
-                <iframe src="https://www.instagram.com/p/C9faahCOh-h/embed" width="385" height="430" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                <iframe src="https://www.instagram.com/p/C9faahCOh-h/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
                 <iframe src="https://www.instagram.com/p/C9dL349y46U/embed" width="385" height="430" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
                 <iframe src="https://www.instagram.com/p/C9dLEL8Sz3y/embed" width="385" height="430" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
                 <iframe src="https://www.instagram.com/p/C9c6zq9Oomy/embed" width="385" height="430" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
@@ -175,13 +175,25 @@
         const lastClone = images[images.length - 1].cloneNode(true);
         carouselSlide.insertBefore(lastClone, images[0]);
 
-        carouselSlide.style.width = `${(images.length + 2.5) * slideSize * 100}%`;
 
-        carouselSlide.style.transform = `translateX(-${counter * slideSize * 100}%)`;
+        if(window.innerWidth > 1500){
+            carouselSlide.style.width = `${(images.length + 2.5) * slideSize * 220}%`;
 
-        function moveToSlide(index) {
+            carouselSlide.style.transform = `translateX(-${counter * slideSize * 100}%)`;
+
+            function moveToSlide(index) {
+            carouselSlide.style.transition = 'transform 0.4s ease-in-out';
+            carouselSlide.style.transform = `translateX(-${index * slideSize * 65}%)`;
+            }
+        }else{
+            carouselSlide.style.width = `${(images.length + 2.5) * slideSize * 100}%`;
+
+            carouselSlide.style.transform = `translateX(-${counter * slideSize * 100}%)`;
+
+            function moveToSlide(index) {
             carouselSlide.style.transition = 'transform 0.4s ease-in-out';
             carouselSlide.style.transform = `translateX(-${index * slideSize * 100}%)`;
+            }
         }
 
         nextBtn.addEventListener('click', () => {
