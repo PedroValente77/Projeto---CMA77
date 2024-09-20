@@ -105,9 +105,27 @@ function cadastrarSocio() {
         };
 
         var sociosCadastrados = JSON.parse(localStorage.getItem("socios")) || [];
-        sociosCadastrados.push(socio);
-        localStorage.setItem("socios", JSON.stringify(sociosCadastrados));
-        alert("Sócio cadastrado com sucesso");
+        var socioCadastradoEmail = sociosCadastrados.findIndex(socio => socio.email === email);
+        var socioCadastradoCPF = sociosCadastrados.findIndex(socio => socio.cpf === cpf);
+
+        if(socioCadastradoEmail !== -1){
+            
+            let msgError = document.querySelector('#msgErrorEmail');
+            msgError.setAttribute('style', 'color: red')
+            msgError.innerHTML = '<p>Email já cadastrado</p>'
+
+        }else if(socioCadastradoCPF !== -1){
+
+            let msgError = document.querySelector('#msgErrorCPF');
+            msgError.setAttribute('style', 'color: red')
+            msgError.innerHTML = '<p>CPF já cadastrado</p>'
+
+        }else{
+            sociosCadastrados.push(socio);
+            localStorage.setItem("socios", JSON.stringify(sociosCadastrados));
+            alert("Sócio cadastrado com sucesso");
+        }
+        
     }
 
 }
