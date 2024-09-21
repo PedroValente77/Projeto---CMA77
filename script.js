@@ -85,7 +85,7 @@ function cadastrarSocio() {
         msgError.setAttribute('style', 'color: red')
         msgError.innerHTML = '<p>CPF inválido</p>'
 
-    }else if (senha != confirmarSenha){
+    }else if (senha !== confirmarSenha){
 
         let msgError = document.querySelector('#msgErrorSenha');
         msgError.setAttribute('style', 'color: red')
@@ -128,5 +128,34 @@ function cadastrarSocio() {
         
     }
 
+}
+
+function logarSocio() {
+    
+    let msgErrorEmail = document.querySelector('#msgErrorEmailLogin');
+    let msgErrorSenha = document.querySelector('#msgErrorSenhaLogin');
+    msgErrorEmail.innerHTML = '';
+    msgErrorSenha.innerHTML = '';
+
+    var email = document.getElementById('txt_emailLogin').value;
+    var senha = document.getElementById('txt_senhaLogin').value;
+
+    var sociosCadastrados = JSON.parse(localStorage.getItem("socios")) || [];
+    var socioCadastradoEmail = sociosCadastrados.findIndex(socio => socio.email === email);
+    let socioCadastradoSenha = sociosCadastrados.findIndex(socio => socio.email === email && socio.senha === senha);   
+    
+    if (socioCadastradoEmail == -1){
+
+        msgErrorEmail.setAttribute('style', 'color: red')
+        msgErrorEmail.innerHTML = '<p>Conta nao existe</p>'
+
+    } else if (socioCadastradoSenha == -1 ){
+
+        msgErrorSenha.setAttribute('style', 'color: red')
+        msgErrorSenha.innerHTML = '<p>Senha incorreta</p>'
+
+    } else {
+        window.location.href = 'index.html';
+    }
 }
 

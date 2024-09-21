@@ -68,12 +68,14 @@
     </menu>
     <main>
         <div class="card_login">
-            <form>
+            <form id="Logar">
                 <div class="titulo_card"><h3>Login</h3></div>
                 <label>Email</label><br>
-                <input><br>
+                <input type="email" id="txt_emailLogin" required><br>
+                <div id="msgErrorEmailLogin"></div>
                 <label>Senha</label><br>
-                <input><br>
+                <input type="password" id="txt_senhaLogin" required><br>
+                <div id="msgErrorSenhaLogin"></div>
                 <button>Entrar</button>
             </form>
         </div>
@@ -90,7 +92,7 @@
                 <div id="msgErrorCPF"></div>
                 <label>Sexo:</label><br>
                 <label style="margin-left: 12%;"> Homem </label> <label> Mulher </label><br>
-                <input id='sexo' name="txt_sexo" type="checkbox" class="inputsexo" oninput="marcaDesmarca(this)"><input id='sexo' name="txt_sexo" type="checkbox" class="inputsexo" oninput="marcaDesmarca(this)"><br>
+                <input id='sexo' name="txt_sexo" type="checkbox" class="inputsexo" oninput="marcaDesmarca(this)"><input id='transar' name="txt_sexo" type="checkbox" class="inputsexo" oninput="marcaDesmarca(this)"><br>
                 <div id="msgErrorSexo"></div>
                 <label>Comando</label><br>
                 <select id="txt_comando" required>
@@ -156,7 +158,8 @@
         document.getElementById("Cadastrar").addEventListener("submit", function(event) {
         event.preventDefault(); 
         var sexo = document.getElementById('sexo');
-        if (!sexo.checked){
+        var transar = document.getElementById('transar');
+        if (!sexo.checked && !transar.checked){
 
             let msgError = document.querySelector('#msgErrorSexo');
             msgError.setAttribute('style', 'color: red')
@@ -165,6 +168,11 @@
             cadastrarSocio();
         }
     });
+
+        document.getElementById("Logar").addEventListener("submit", function(event) {
+        event.preventDefault();
+        logarSocio();
+        });
     
 </script>
 </html>
