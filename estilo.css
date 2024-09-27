@@ -745,6 +745,75 @@ footer a {
     width: 80%;
   }
 
+  .card_cadastro{
+    background-color: rgb(250, 250, 250);
+    padding: 2%;
+    border-width: 1px;
+    border-radius: 5%;
+    margin: 20% 10% 5% 10%;
+    width: 75%;
+    box-shadow: 0.3rem 0.3rem 0.3rem rgba(31, 0, 209, 0.295);
+  }
+
+  .card_login{
+    background-color: rgb(250, 250, 250);
+    padding: 2%;
+    border-width: 1px;
+    border-radius: 5%;
+    margin: 10% 10% 0% 10%;
+    width: 75%;
+    box-shadow: 0.3rem 0.3rem 0.3rem rgba(31, 0, 209, 0.295);
+    text-align: left;
+    float: none;
+  }
+
+  input {
+    margin: 1% 0%;
+    border: solid 1px rgba(31, 0, 209, 0.295);
+    border-radius: 5%;
+    height: 25px;
+    width: 75%;
+    font-weight: bold;
+    color: #0C4C9B;;
+  }
+
+  select {
+    margin: 1% 0%;
+    border: solid 1px rgba(31, 0, 209, 0.295);
+    border-radius: 5%;
+    height: 25px;
+    width: 75%;
+    font-weight: bold;
+    color: #0C4C9B;;
+  }
+
+  .titulo_card{
+    text-align: center;
+    margin-bottom: 5%;
+    margin: 1% 0%;
+  }
+
+  form button{
+    margin: 5% 0%;
+    background-color:#0C4C9B;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 1.5%;
+    border-radius: 5%;
+    width: 30%;
+    font-size:medium;
+  }
+
+  .inputsexo{
+    margin-bottom: 10%;
+    width: 42%;
+  }
+
+  label{
+    margin-right: 23%;
+  }
+
   /* NAV */
 
     nav{

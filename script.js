@@ -124,6 +124,8 @@ function cadastrarSocio() {
             sociosCadastrados.push(socio);
             localStorage.setItem("socios", JSON.stringify(sociosCadastrados));
             alert("Sócio cadastrado com sucesso");
+            sociosCadastrados = JSON.parse(sociosCadastrado);
+            window.location.href = 'socio.html?id=' + sociosCadastrados.id;
         }
         
     }
