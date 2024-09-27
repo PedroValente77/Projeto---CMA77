@@ -156,6 +156,7 @@ function logarSocio() {
 
     } else {
         let socioCadastradoSenha = sociosCadastrados.find(socio => socio.email === email && socio.senha === senha);
+        localStorage.setItem("sessao", JSON.stringify(socioCadastradoSenha));
         window.location.href = 'socio.html?id=' + socioCadastradoSenha.id;
         localStorage.setItem('usuarioLogado', JSON.stringify(userValid));
     }
