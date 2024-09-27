@@ -149,13 +149,15 @@ function logarSocio() {
         msgErrorEmail.setAttribute('style', 'color: red')
         msgErrorEmail.innerHTML = '<p>Conta nao existe</p>'
 
-    } else if (socioCadastradoSenha == -1 ){
+    } else if (socioCadastradoSenha == null ){
 
         msgErrorSenha.setAttribute('style', 'color: red')
         msgErrorSenha.innerHTML = '<p>Senha incorreta</p>'
 
     } else {
-        window.location.href = 'index.html';
+        let socioCadastradoSenha = sociosCadastrados.find(socio => socio.email === email && socio.senha === senha);
+        window.location.href = 'socio.html?id=' + socioCadastradoSenha.id;
+        localStorage.setItem('usuarioLogado', JSON.stringify(userValid));
     }
 }
 
