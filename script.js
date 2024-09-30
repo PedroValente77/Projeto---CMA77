@@ -29,6 +29,11 @@ function cadastrarSocio() {
     var comando = document.getElementById('txt_comando').value;
     var email = document.getElementById("txt_email").value;
     var senha = document.getElementById("txt_senha").value;
+    var data_nasc = null;
+    var logradouro = null;
+    var numero = null;
+    var complemento = null;
+    var bairro = null;
 
     var confirmarSenha = document.getElementById("txt_confirmarSenha").value
     var cpf1 = cpf.charAt(0, 3);
@@ -101,7 +106,12 @@ function cadastrarSocio() {
             sexo: sexo,
             comando: comando,
             email: email,
-            senha: senha
+            senha: senha,
+            data_nasc: data_nasc,
+            logradouro: logradouro,
+            numero: numero,
+            complemento: complemento,
+            bairro: bairro
         };
 
         var sociosCadastrados = JSON.parse(localStorage.getItem("socios")) || [];
@@ -124,8 +134,7 @@ function cadastrarSocio() {
             sociosCadastrados.push(socio);
             localStorage.setItem("socios", JSON.stringify(sociosCadastrados));
             alert("Sócio cadastrado com sucesso");
-            sociosCadastrados = JSON.parse(sociosCadastrado);
-            window.location.href = 'socio.html?id=' + sociosCadastrados.id;
+            window.location.href = 'socio.html?id=' + newId;
         }
         
     }
@@ -163,4 +172,3 @@ function logarSocio() {
         localStorage.setItem('usuarioLogado', JSON.stringify(userValid));
     }
 }
-
