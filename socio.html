@@ -27,8 +27,102 @@
             <a href="sign_socio.html"><img class="hsocio" src="/img/socio.png"></a>
         </div>
     </header>
+    <menu>
+        <div class="menu-d">
+            <div class="menuum">
+                <span class="menu-opcao1">A Máfia Azul<i class=""></i></span>
+                <div class="opcoes">
+                <a href="">Marca</a>
+                <a href="">Opção 2</a>
+                <a href="">Opção 3</a>
+                </div>
+            </div>
+            <div class="menudois">
+                <span class="menu-opcao2">Noticias<i class=""></i></span>
+                <div class="opcoes2">
+                <a href="">Opção 1</a>
+                <a href="">Opção 2</a>
+                <a href="">Opção 3</a>
+                </div>
+            </div>
+        </div>
+        <img class="logo" src="/img/logo.png">
+        <div class="menu-e">
+            <div class="menutres">
+                <span class="menu-opcao3">Produtos e Serviços<i class=""></i></span>
+                <div class="opcoes3">
+                <a href="">Opção 1</a>
+                <a href="">Opção 2</a>
+                <a href="">Opção 3</a>
+                </div>
+            </div>
+            <div class="menuquatro">
+                <span class="menu-opcao4">Négocios<i class=""></i></span>
+                <div class="opcoes4">
+                <a href="">Patrocinadores</a>
+                <a href="">Opção 2</a>
+                <a href="">Opção 3</a>
+                </div>
+            </div>
+        </div>
+    </menu>
     <main>
-        
+        <form id="Perfil">
+            <h3> DADOS DE ACESSO </h3>
+            <div class='linePerfil'></div>
+            <label class='labelPerfil'> Email: </label><br>
+            <input id="txt_email" class='inputPerfil' disabled><br>
+            <label class='labelPerfil'> Senha: </label><br>
+            <input id="txt_senha" class='inputPerfill' type="password"><br>
+            <label class='labelPerfil'> Confirme sua senha: </label><br>
+            <input id="txt_confirmarsenha" class='inputPerfill' type="password"><br>
+            <label class='labelPerfil'> Senha atual: </label><br>
+            <input id="txt_senhaatual" class='inputPerfill' type="password"><br>
+            <div id="Senha"><button class="button" style="margin-bottom: 1%;">Atualizar Senha</button></div><br>
+            <button class="button" style="margin-bottom: 4%;">Sair</button>
+
+            <h3> DADOS PESSOAIS </h3>
+            <div class='linePerfil'></div>
+            <label class='labelPerfil'> Nome: </label><br>
+            <input class='inputPerfil' id="txt_nome"><br>
+            <label class='labelPerfil'> Sexo: </label><br>
+            <label class='labelPerfil'> Homem </label> <label class='labelPerfil'> Mulher </label><br>
+            <div class='caixas'>
+                <input id='sexo' name="txt_sexo" type="checkbox" class="inputsexo" oninput="marcaDesmarca(this)" checked>
+                <input id='transar' name="txt_sexo" type="checkbox" class="inputsexo" oninput="marcaDesmarca(this)">
+            </div><br>
+            <label class='labelPerfil'> CPF: </label><br>
+            <input id="txt_cpf" class='inputPerfil'disabled><br>
+            <label class='labelPerfil'> Data de Nascimento: </label><br>
+            <input id="txt_data" class='inputPerfil' id='txt_data' value='${socio.data_nasc}' maxlength="10" oninput="formataData(this)"><br>
+            <label class='labelPerfil'> Telefone: </label><br>
+            <input id="txt_telefone" class='inputPerfil'><br>
+            <label class='labelPerfil'> Comando: </label><br>
+            <select id="txt_comando" style="width:30%; margin:0% 0% 2% 0%" required>
+                <option>CZO</option>
+                <option>CZL</option>
+                <option>CZN</option>
+                <option>CNO</option>
+                <option>BARREIRO</option>
+            </select><br>
+
+            <h3> ENDEREÇO </h3>
+            <div class='linePerfil'></div>
+            <label class='labelPerfil'> CEP: </label><br>
+            <input class='inputPerfil'><br>
+            <label class='labelPerfil'> Logradouro: </label><br>
+            <input id="txt_logradouro" class='inputPerfil'><br>
+            <label class='labelPerfil' style="margin-right:9%"> Número: </label>
+            <label class='labelPerfil'> Complemento: </label><br>
+            <input id="txt_numero" class='inputPerfil' style="width:15%">
+            <input id="txt_complemento" class='inputPerfil'><br>
+            <label class='labelPerfil'> Bairro: </label><br>
+            <input id="txt_bairro" class='inputPerfil'><br>
+        </form>
+
+            <h3> Atualizar </h3>
+            <div class='linePerfil'></div>
+            <form id="Atualizar"><button class="button">Atualizar</button></form>
     </main>
     <footer>
         <div class="titulo_patrofooter">
@@ -41,7 +135,7 @@
             <div><a href=""><h3>VER TODOS OS PATROCINADORES</h3></a></div>
         </div>
         <div class="line">
-
+            
         </div>
         <div class="final_footer">
             <div class="redessociais">
@@ -61,3 +155,62 @@
         </div>
     </footer>
 </body>
+<script>
+    window.onload = function() {
+        var usuarioLogado = localStorage.getItem("sessao"); 
+        const urlParams = new URLSearchParams(window.location.search);
+        const Id = (urlParams.get('id')); 
+
+        var socios = JSON.parse(localStorage.getItem("socios")) || [];
+    
+        const socio = socios.find(socio => socio.id === Id);
+
+        if(socio.sexo = "h"){
+            document.getElementById("Perfil").elements["txt_nome"].value = socio.nome;
+            document.getElementById("Perfil").elements["txt_email"].value = socio.email;
+            document.getElementById("sexo").checked = true;
+            document.getElementById("transar").checked = false;
+            document.getElementById("Perfil").elements["txt_cpf"].value = socio.cpf;
+            document.getElementById("Perfil").elements["txt_data"].value = socio.data_nasc;
+            document.getElementById("Perfil").elements["txt_telefone"].value = socio.telefone;
+            document.getElementById("Perfil").elements["txt_comando"].value = socio.comando;
+            document.getElementById("Perfil").elements["txt_logradouro"].value = socio.logradouro;
+            document.getElementById("Perfil").elements["txt_numero"].value = socio.numero;
+            document.getElementById("Perfil").elements["txt_complemento"].value = socio.complemento;
+            document.getElementById("Perfil").elements["txt_bairro"].value = socio.bairro;
+        } else {
+            document.getElementById("Perfil").elements["txt_nome"].value = socio.nome;
+            document.getElementById("Perfil").elements["txt_email"].value = socio.email;
+            document.getElementById("sexo").checked = false;
+            document.getElementById("transar").checked = true;
+            document.getElementById("Perfil").elements["txt_cpf"].value = socio.cpf;
+            document.getElementById("Perfil").elements["txt_data"].value = socio.data_nasc;
+            document.getElementById("Perfil").elements["txt_comando"].value = socio.comando;
+            document.getElementById("Perfil").elements["txt_logradouro"].value = socio.logradouro;
+            document.getElementById("Perfil").elements["txt_numero"].value = socio.numero;
+            document.getElementById("Perfil").elements["txt_complemento"].value = socio.complemento;
+            document.getElementById("Perfil").elements["txt_bairro"].value = socio.bairro;
+        }
+
+        
+    
+}
+        document.getElementById("Atualizar").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const urlParams = new URLSearchParams(window.location.search);
+            const Id = (urlParams.get('id')); 
+            AtualizarSocio(Id); 
+    });
+    
+
+    function marcaDesmarca(clickedCheckbox) {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        if (checkbox !== clickedCheckbox) {
+            checkbox.checked = false;
+        }
+    });
+}
+</script>
+<script href="script.js"></script>
+</html>

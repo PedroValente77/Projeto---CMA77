@@ -12,6 +12,13 @@ function formataTelefone(input){
     input.value = telefoneFormatado;
 }
 
+function formataData(input){
+    var numerosApenas = input.value.replace(/\D/g, '');
+    var padrao = /(\d{2})(\d{2})(\d{4})/;
+    var dataFormatada = numerosApenas.replace(padrao,'$1/$2/$3');
+    input.value = dataFormatada;
+}
+
 function cadastrarSocio() {
     let msgErrorCPF = document.querySelector('#msgErrorCPF');
     let msgErrorTelefone = document.querySelector('#msgErrorTelefone');
@@ -29,11 +36,11 @@ function cadastrarSocio() {
     var comando = document.getElementById('txt_comando').value;
     var email = document.getElementById("txt_email").value;
     var senha = document.getElementById("txt_senha").value;
-    var data_nasc = null;
-    var logradouro = null;
-    var numero = null;
-    var complemento = null;
-    var bairro = null;
+    var data_nasc = "";
+    var logradouro = "";
+    var numero = "";
+    var complemento = "";
+    var bairro = "";
 
     var confirmarSenha = document.getElementById("txt_confirmarSenha").value
     var cpf1 = cpf.charAt(0, 3);
@@ -160,7 +167,7 @@ function logarSocio() {
         msgErrorEmail.setAttribute('style', 'color: red')
         msgErrorEmail.innerHTML = '<p>Conta nao existe</p>'
 
-    } else if (socioCadastradoSenha == null ){
+    } else if (socioCadastradoSenha == -1 ){
 
         msgErrorSenha.setAttribute('style', 'color: red')
         msgErrorSenha.innerHTML = '<p>Senha incorreta</p>'
@@ -171,4 +178,51 @@ function logarSocio() {
         window.location.href = 'socio.html?id=' + socioCadastradoSenha.id;
         localStorage.setItem('usuarioLogado', JSON.stringify(userValid));
     }
+}
+
+function AtualizarSocio(socioId) {
+
+    var sociosCadastrados = JSON.parse(localStorage.getItem("socios")) || [];
+    var socioIndex = sociosCadastrados.findIndex(socio => socio.id === socioId);
+    const socio = sociosCadastrados.find(s => s.id === socioId);
+    var senha = socio.senha;
+
+            var nome = document.getElementById("txt_nome").value;
+            var cpf = document.getElementById("txt_cpf").value;
+            var telefone = document.getElementById("txt_telefone").value;
+            var sexo = document.querySelector('input[name="txt_sexo"]:checked').value;
+            var comando = document.getElementById('txt_comando').value;
+            var email = document.getElementById("txt_email").value;
+            var data_nasc = document.getElementById("txt_data").value || "";
+            var logradouro = document.getElementById("txt_logradouro").value || "";
+            var numero = document.getElementById("txt_numero").value || "";
+            var complemento = document.getElementById("txt_complemento").value || "";
+            var bairro = document.getElementById("txt_bairro").value || "";
+            
+
+    if (socioIndex !== -1) {
+        sociosCadastrados[socioIndex] = {
+            senha: senha,
+            id: socioId,
+            nome: nome,
+            cpf: cpf,
+            telefone: telefone,
+            sexo: sexo,
+            comando: comando,
+            email: email,
+            data_nasc: data_nasc,
+            logradouro: logradouro,
+            numero: numero,
+            complemento: complemento,
+            bairro: bairro
+        };
+
+        localStorage.setItem("socios", JSON.stringify(sociosCadastrados));
+        alert("Informação atualizada");
+}
+}
+
+function AtualizarSenha(socioId) {
+
+    alert('entrou');
 }
